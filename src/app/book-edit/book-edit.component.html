@@ -1,0 +1,28 @@
+<div class="edit-book">
+    <div class='edit-book-title'>
+        Редактирование книги
+    </div>
+    <div class="status-change" [class.hiden]="!edit">
+        Информация успешно изменена!
+    </div>
+    <div class='edit-book-info'>
+        <div class='image'>
+            <span>Картинка</span> <input type="text" [(ngModel)]="book.img" />
+        </div>
+        <div class='author'>
+            <span>Автор</span> <input type="text" [(ngModel)]="book.author" />
+        </div>
+        <div class='name'>
+            <span>Название</span> <input type="text" [(ngModel)]="book.name"/>
+        </div>
+        <div class='yaer'>
+            <span>Год издания</span> <input type="text"  [(ngModel)]="book.year"/>
+        </div>
+    </div>
+    <div class='edit-book-btn'>
+
+        <button class='btn-red cansel' (click) ="toMain()">Отменить</button>
+        <button class='btn btn-blue confirm' (click) ="submit()">Подтвердить</button>
+    </div>
+</div>
+

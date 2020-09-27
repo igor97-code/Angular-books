@@ -1,0 +1,24 @@
+<div class="edit-book">
+    <div class='edit-book-title'>
+        Редактирование книги
+    </div>
+    <div class='edit-book-info'>
+        <div class='image'>
+            <span>Картинка</span> <input type="text" [(ngModel)]="img" />
+        </div>
+        <div class='author'>
+            <span>Автор</span> <input type="text" [(ngModel)]="author" />
+        </div>
+        <div class='name'>
+            <span>Название</span> <input type="text" [(ngModel)]="name"/>
+        </div>
+        <div class='yaer'>
+            <span>Год издания</span> <input type="text"  [(ngModel)]="year"/>
+        </div>
+    </div>
+    <div class='edit-book-btn'>
+
+        <button class='btn-red cansel' (click) ="toMain()">Отменить</button>
+        <button class='btn btn-blue confirm' (click) ="submit()">Добавить</button>
+    </div>
+</div>

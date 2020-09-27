@@ -1,0 +1,48 @@
+.edit-book{
+    font-size:36px;
+    border: 1px solid grey;
+    padding: 20px;
+    position: relative;
+    .edit-book-info{
+        margin-top:20px;
+         div{
+            margin-top:15px;
+            display: flex;
+            justify-content: space-between;
+         }
+        input{
+            margin-left:15px;
+            font-size: 30px;
+            padding:10px;
+            border-radius: 7px;
+            border:1px solid blue
+        }
+    }
+    .edit-book-btn{
+        margin:25px 0 25px;    
+        button{
+            outline: none;
+            border:none;
+            cursor: pointer;
+            font-size: 25px;
+            padding: 14px;
+            border-radius: 5px;
+            color: #fff;
+            bottom:15px;
+            &.confirm{
+                margin-left:20px;
+            }
+        }
+    }
+    .status-change{
+        position: absolute;
+        top: -220px;
+        padding: 50px;
+        color: white;
+        background-color: #83f183;
+        &.show{
+            opacity:1;
+            transition: all 1s ease-in-out;
+        }
+    }
+}

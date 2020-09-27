@@ -1,0 +1,36 @@
+
+<div class="book-list">
+    <div class='book-list-header'>
+        <div class='book-list-title'>
+            Список книг
+        </div>
+        <!-- <Link  to = '/add-book'> -->
+            <div class='book-list-btn'>
+                <button class='btn btn-blue' (click) ="addBook()">Добавить книгу</button>
+            </div>
+        <!-- </Link> -->
+    </div>
+    <div class="book-list-books">
+        <div class="book" *ngFor = "let book of BooksService.books">
+            <img src={{book.img}} alt="">
+            <div class='book-description'>
+                <div class='book-author'>
+                    <div>Автор:</div> <div>{{book.author}}</div>
+                </div>
+
+                <div class='book-name'>
+                    <div> Название:</div>
+                    <div>{{book.name}}</div>
+                </div>
+                <div class='book-year'>
+                    <div>Год издания:</div>
+                    <div> {{book.year}}</div>
+                </div>
+            </div>
+            <div class='book-btn dflex'>
+                     <button class='btn btn-blue' (click) ="goEditBook(book.id)">Редактировать</button>
+                <button class='btn btn-red' (click) ="BooksService.delBook(book.id)">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
